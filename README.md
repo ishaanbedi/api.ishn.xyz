@@ -92,7 +92,7 @@ https://api.ishn.xyz/v1?url=https://www.github.com
 This will send a request to the API and display the response in the browser.
 
 
-** To get more info about this API and understand the complete architecture, please refer to [api.ishn.xyz/info](https://api.ishn.xyz/info).
+** To get more info about this API and understand the complete architecture, please refer to [api.ishn.xyz/v1/info](https://api.ishn.xyz/v1/info).
 
 ## License
 
