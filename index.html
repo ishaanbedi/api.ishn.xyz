@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>api.ishn.xyz | Home</title>
+  </head>
+  <body style="padding: 1rem">
+    <head>
+      <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css" />
+    </head>
+    <h1 id="api-ishn-xyz">api.ishn.xyz</h1>
+    <p>
+      This API allows users to create short URLs for long URLs, built on top of
+      <a href="https://www.ishn.xyz">ishn.xyz</a>, a fast and minimal link
+      shortener.
+    </p>
+    <h2 id="link">Link</h2>
+    <p>
+      The api is accessible at <a href="https://api.ishn.xyz">api.ishn.xyz</a>
+    </p>
+    <h2 id="endpoints">Endpoints</h2>
+    <p>
+      Create a short URL:
+      <code>
+        <strong> GET /v1?url= < long_url > </strong>
+      </code>
+    </p>
+    <p>This endpoint creates a short URL for the specified long URL.</p>
+    <h2 id="parameters">Parameters</h2>
+    <ul>
+      <li>url: The long URL to be shortened. (required)</li>
+    </ul>
+    <h2 id="response">Response</h2>
+    <p>
+      On success, the API returns a JSON object with the following properties:
+    </p>
+    <ul>
+      <li>
+        success: A boolean indicating whether the request was successful (true
+        in this case)
+      </li>
+      <li>slug: The short URL slug, without ishn.xyz.</li>
+      <li>url: The complete shortened URL.</li>
+      <li>original: The original long URL.</li>
+      <li>status_code: The HTTP status code of the response.</li>
+    </ul>
+    <p>
+      On error, the API returns a JSON object with the following properties:
+      error: An error message.
+    </p>
+    <ul>
+      <li>
+        success: A boolean indicating whether the request was successful. (false
+        in this case)
+      </li>
+      <li>status_code: The HTTP status code of the response.</li>
+      <li>hint: A hint on how to fix the error.</li>
+    </ul>
+    <h2 id="api-limits">API Limits</h2>
+    <p>
+      To ensure fair usage and to protect our resources, this API has the
+      following limits in place:
+    </p>
+    <ul>
+      <li><strong>Rate limits</strong>: 10 requests per minute</li>
+    </ul>
+    <p>Please be mindful of the limits when using our API.</p>
+    <p>
+      If you exceed a limit, you may receive an error message or your requests
+      may be blocked until the limit resets.
+    </p>
+    <p>
+      If you need to exceed the API rate limits for a genuine use case, please
+      contact me at <a href="mailto:hi@ishaanbedi.in">hi@ishaanbedi.in</a> with
+      a brief description of your use case. I might be able to lift the rate
+      limits for you if your use-case does not negatively impact the resources.
+    </p>
+    <p>Thank you for respecting the API rate limits</p>
+    <h2 id="using-the-api">Using the API</h2>
+    <p>
+      There are several ways to use the API, including using a terminal, a
+      browser, or a tool like Postman, Insomnia or Thunder.
+    </p>
+    <h3 id="using-in-a-terminal">Using in a Terminal</h3>
+    <p>
+      You can use the API using a terminal by using <code>curl</code> or
+      <code>wget</code>.
+    </p>
+    <h4 id="example-with-curl">Example with curl</h4>
+    <p>To test the <code>GET /v1</code> endpoint, use the following command:</p>
+    <pre><code>curl http<span class="hljs-variable">s:</span>//api.ishn.xyz/v1?url=http<span class="hljs-variable">s:</span>//www.github.<span class="hljs-keyword">com</span>
+    </code></pre>
+    <p>This will send a request to the API and return the response.</p>
+    <h4 id="example-with-wget">Example with wget</h4>
+    <p>To test the <code>GET /v1</code> endpoint, use the following command:</p>
+    <pre><code>wget -qO- http<span class="hljs-variable">s:</span>//api.ishn.xyz/v1?url=http<span class="hljs-variable">s:</span>//www.github.<span class="hljs-keyword">com</span>
+    </code></pre>
+    <p>
+      This will send a request to the API and print the response to the
+      terminal.
+    </p>
+    <h3 id="by-using-in-a-browser">By using in a Browser</h3>
+    <p>
+      You can also use/test the API using a browser by simply visiting the API
+      endpoint URL in the address bar.
+    </p>
+    <p>
+      For example, to test the <code>GET /v1</code> endpoint, visit the
+      following URL in your browser:
+    </p>
+    <pre><code>http<span class="hljs-variable">s:</span>//api.ishn.xyz/v1?url=http<span class="hljs-variable">s:</span>//www.github.<span class="hljs-keyword">com</span>
+    </code></pre>
+    <p>
+      This will send a request to the API and display the response in the
+      browser.
+    </p>
+    <p>
+      <strong>
+        To get more info about this API and understand the complete
+        architecture, please refer to
+        <a href="https://api.ishn.xyz/info">api.ishn.xyz/info</a>.</strong
+      >
+    </p>
+    <h2 id="license">License</h2>
+    <p>This API is licensed under the MIT License.</p>
+  </body>
+</html>
