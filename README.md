@@ -3,7 +3,7 @@
 
 # api.ishn.xyz
 
-This API allows users to create short URLs for long URLs, built on top of [ishn.xyz](https://www.ishn.xyz), a fast and minimal link shortener.
+API application of [ishn.xyz](https://www.ishn.xyz), a fast and minimal link shortener.
 
 ## Link
 
